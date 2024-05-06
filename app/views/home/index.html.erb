@@ -11,8 +11,18 @@
     <h1><span style="color: forestgreen;">Grocery</span> App</h1>
     <div class="button-container">
       <% if user_signed_in? %> 
-       <div> Welcome <%= current_user.email %> </div> 
-        <%= button_to "Sign out", destroy_user_session_path, method: :delete %> 
+       <div> Welcome <%= current_user.email %> </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>""    </th>
+              <th>Cost</th>
+              <th>Purchase_Date</th>
+            </tr>
+          </thead>
+        </table>
+        <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
       <% else %>
         <%= button_to "Sign In", new_user_session_path, class: "button" %> 
       <% end %>
