@@ -1,0 +1,37 @@
+/* Add your styles here */
+.container {
+    text-align: center;  /* Center the content within the container */
+  }
+  
+  .button-container {
+    display: flex;  /* Ensure container uses flexbox */
+    justify-content: center;  /* Center buttons horizontally */
+    margin-top: 200px;  /* Increase margin-top to visually position buttons lower */
+  }
+  
+  .button {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 5px;
+    text-decoration: none;
+    color: green;
+    background-color: black;
+    cursor: pointer;  /* Add cursor pointer for button hover effect */
+    transition: background-color 0.2s ease-in-out, transform 0.1s ease;  /* Add transition for smooth hover and click effects */
+    
+    /* Option 1: Fixed width (choose one approach) */
+    width: 150px;  /* Set a fixed width for both buttons */
+    
+    /* Option 2: Minimum width with flexbox (choose one approach) */
+    /* flex-basis: 150px;  Set a minimum width for buttons */
+    /* flex-grow: 0;        Disable horizontal growth beyond minimum width */
+  }
+  
+  .button:hover {
+    background-color: #333;  transform: translateY(-2px);  /* Slight down movement on hover */
+  }
+  
+  .button:active {
+    background-color: #222;  transform: translateY(2px);  /* Slight up movement on click */
+  }
