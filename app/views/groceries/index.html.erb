@@ -1,0 +1,22 @@
+<h1>Grocery List</h1>
+<% if @groceries.present? %>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Cost</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @groceries.each do |grocery| %>
+        <tr>
+          <td><%= grocery.name %></td>
+          <td><%= grocery.cost %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <p>You haven't added any groceries yet!</p>
+<% end %>
+<%= link_to "Home", root_path, class: "button" %>

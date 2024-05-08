@@ -16,4 +16,6 @@ Rails.application.routes.draw do
   get '/login' => 'sessions#new', as: 'login'  # Example login route
   get '/about_us' => 'pages#about', as: 'about_us'  # Example about us route
 
+  get '/grocery_list', to: 'groceries#index', as: 'grocery_list'
+
 end
